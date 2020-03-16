@@ -16,6 +16,7 @@ import (
 // Accepts two inputs, the fully qualified path of a binary (string) and concatinated list of flags (string)
 // Executes the binary with the given flags and
 // returns stdOut (string) and stdErr (string)
+// func Run( string,  string) (string, string)
 func Run(binaryPath string, params string) (string, string) {
 	fmt.Println("[+++++ xcap.libs.execuator.Run] Start Run for ", binaryPath, params)
 
@@ -40,6 +41,7 @@ func Run(binaryPath string, params string) (string, string) {
 // Accepts two inputs, the fully qualified path of a binary (string) and concatinated list of flags (string)
 // Executes the binary with the given flags and
 // returns stdOut (string) and stdErr (string)
+// func Shellout( string,  string) (string, string)
 func Shellout(binaryPath string, params string) (string, string) {
 	fmt.Println("[+++++ xcap.libs.execuator.Shellout] Start Shellout for ", binaryPath, params)
 
