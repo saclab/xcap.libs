@@ -1,7 +1,7 @@
 # Package Execuator
 
-Doc:
+##Run:
 {{ "Run" | doc }}
 
-Doc
+##Shellout
 {{ "Shellout" | doc }}
