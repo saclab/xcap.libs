@@ -1,7 +1,5 @@
 package spacegroup
 
-import "fmt"
-
 // Get : return the spacegroup form a spacegroup finger print
 // http://img.chem.ucl.ac.uk/sgp/large/sgp.htm
 func Get(fingerprint string) string {
@@ -159,20 +157,20 @@ func Get(fingerprint string) string {
 	sg["I41/acd"] = "I 41 / a c d"
 
 	// Trigonal
-	sg["P3"] = "P 3"	
+	sg["P3"] = "P 3"
 	sg["P31"] = "P 31"
 	sg["P32"] = "P 32"
 	sg["R3"] = "R 3"
 	sg["R-3"] = "R -3"
 	sg["P312"] = "P 3 1 2"
-	sg["P321"] = "P 3 2 1"	
+	sg["P321"] = "P 3 2 1"
 	sg["P3112"] = "P 31 1 2"
 	sg["P3121"] = "P 31 2 1"
 	sg["R3212"] = "P 32 1 2"
 	sg["R3221"] = "P 32 2 1"
 	sg["R32"] = "R 3 2"
 	sg["P3m1"] = "P 3 m 1"
-	sg["P31m"] = "P 3 1 m"	
+	sg["P31m"] = "P 3 1 m"
 	sg["P3c1"] = "P 3 c 1"
 	sg["P31c"] = "P 3 1 c"
 	sg["R3m"] = "R 3 m"
@@ -185,20 +183,20 @@ func Get(fingerprint string) string {
 	sg["R-3c"] = "R -3 c"
 
 	// Hexagonal
-	sg["P6"] = "P 6"	
+	sg["P6"] = "P 6"
 	sg["P61"] = "P 61"
 	sg["P65"] = "P 65"
 	sg["P62"] = "P 62"
 	sg["P64"] = "P 64"
 	sg["P63"] = "P 63"
-	sg["P-6"] = "P -6"	
+	sg["P-6"] = "P -6"
 	sg["P6/m"] = "P 6 / m"
 	sg["P63/m"] = "P 63 / m"
 	sg["P622"] = "P 6 2 2"
 	sg["P6122"] = "P 61 2 2"
 	sg["P6522"] = "P 65 2 2"
 	sg["P6222"] = "P 62 2 2"
-	sg["P6422"] = "P 64 2 2"	
+	sg["P6422"] = "P 64 2 2"
 	sg["P6322"] = "P 63 2 2"
 	sg["P6mm"] = "P 6 m m"
 	sg["P6cc"] = "P 6 c c"
@@ -214,20 +212,20 @@ func Get(fingerprint string) string {
 	sg["P63/mmc"] = "P 63 / m m c"
 
 	// Cubic
-	sg["P23"] = "P 2 3"	
+	sg["P23"] = "P 2 3"
 	sg["F23"] = "F 2 3"
 	sg["I23"] = "I 2 3"
 	sg["P213"] = "P 21 3"
 	sg["I213"] = "I 21 3"
 	sg["Pm-3"] = "P m -3"
-	sg["Pn-3"] = "P n -3"	
+	sg["Pn-3"] = "P n -3"
 	sg["Fm-3"] = "F m -3"
 	sg["Fd-3"] = "F d -3"
 	sg["Im-3"] = "I m -3"
 	sg["Pa-3"] = "P a -3"
 	sg["Ia-3"] = "I a -3"
 	sg["P432"] = "P 4 3 2"
-	sg["P4232"] = "P 42 3 2"	
+	sg["P4232"] = "P 42 3 2"
 	sg["F432"] = "F 4 3 2"
 	sg["F4132"] = "F 41 3 2"
 	sg["I432"] = "I 4 3 2"
@@ -250,9 +248,6 @@ func Get(fingerprint string) string {
 	sg["Fd-3c"] = "F d -3 c"
 	sg["Im-3m"] = "I m -3 m"
 	sg["Ia-3d"] = "I a -3 d"
-	
-	fmt.Println("Searching for", fingerprint)
-	fmt.Println("Returning", sg[fingerprint])
 
 	return sg[fingerprint]
 
