@@ -1,4 +1,4 @@
-# Package Execuator
+# Package Executor
 
 ## Run:
 {{ "Run" | doc }}

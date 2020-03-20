@@ -1,7 +1,7 @@
-// Package execuator provides functions for running shell commands
+// Package executor provides functions for running shell commands
 // and capturing their output.
 // This also supports streaming the results while it is executing.
-package execuator
+package executor
 
 import (
 	"bytes"
@@ -18,7 +18,7 @@ import (
 // returns stdOut (string) and stdErr (string)
 // func Run( string,  string) (string, string)
 func Run(binaryPath string, params string) (string, string) {
-	fmt.Println("[+++++ xcap.libs.execuator.Run] Start Run for ", binaryPath, params)
+	fmt.Println("[+++++ xcap.libs.executor.Run] Start Run for ", binaryPath, params)
 
 	cmd := exec.Command(binaryPath, params)
 	var stdout, stderr bytes.Buffer
@@ -32,7 +32,7 @@ func Run(binaryPath string, params string) (string, string) {
 
 	outStr, errStr := string(stdout.Bytes()), string(stderr.Bytes())
 
-	fmt.Println("[+++++ xcap.libs.execuator.Run] End Run for ", binaryPath, params)
+	fmt.Println("[+++++ xcap.libs.executor.Run] End Run for ", binaryPath, params)
 	return outStr, errStr
 
 }
@@ -43,7 +43,7 @@ func Run(binaryPath string, params string) (string, string) {
 // returns stdOut (string) and stdErr (string)
 // func Shellout( string,  string) (string, string)
 func Shellout(binaryPath string, params string) (string, string) {
-	fmt.Println("[+++++ xcap.libs.execuator.Shellout] Start Shellout for ", binaryPath, params)
+	fmt.Println("[+++++ xcap.libs.executor.Shellout] Start Shellout for ", binaryPath, params)
 
 	cmd := exec.Command(binaryPath, params)
 	var stdoutBuf, stderrBuf bytes.Buffer
@@ -57,6 +57,6 @@ func Shellout(binaryPath string, params string) (string, string) {
 
 	outStr, errStr := string(stdoutBuf.Bytes()), string(stderrBuf.Bytes())
 
-	fmt.Println("[+++++ xcap.libs.execuator.Shellout] End Shellout for ", binaryPath, params)
+	fmt.Println("[+++++ xcap.libs.executor.Shellout] End Shellout for ", binaryPath, params)
 	return outStr, errStr
 }

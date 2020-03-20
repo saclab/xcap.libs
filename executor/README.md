@@ -1,4 +1,4 @@
-# Package Execuator
+# Package Executor
 
 ## Run:
 Run : Run a function and return the std output and error
